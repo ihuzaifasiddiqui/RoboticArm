@@ -4,15 +4,15 @@
 #include <Servo.h>
 
 // You should get Auth Token in the Blynk App.
-// Go to the Project Settings (nut icon).
+// Go to the Project Settings (gear icon).
 
-char auth[] = "XN4Yb7czKNlueE4RGC5o2Lm6Tkjzgxvf";  //Paste your Auth Token Here 
+char auth[] = "Paste your Auth Token Here";   
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
 
-char ssid[] = "DIR-HOME"; //Enter your Wifi User Name
-char pass[] = "DontAskIt"; //Enter your Wifi Password
+char ssid[] = "Wifi SSID"; //Enter your Wifi User Name
+char pass[] = "Wifi password"; //Enter your Wifi Password
 
 
 Servo waist;
@@ -24,10 +24,10 @@ Servo wristpitch;
 Servo Gripper;
 
 
-
+//V0,V1..are virtual pins 
 BLYNK_WRITE(V0)
 {
-  waist.write(param.asInt());
+  waist.write(param.asInt());//param.asInt is a function of blynk library which returns integer parameter from the blynk app.
 }
 
 BLYNK_WRITE(V1)
